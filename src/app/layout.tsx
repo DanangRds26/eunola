@@ -9,6 +9,7 @@ const playfair = Playfair_Display({
   weight: ["500", "600", "700"],
   variable: "--font-playfair",
   display: "swap",
+  preload: false,
 });
 
 const poppins = Poppins({
@@ -16,6 +17,7 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-poppins",
   display: "swap",
+  preload: false,
 });
 
 /** Font script elegan untuk nama pasangan di tema undangan (mis. Adat Jawa Coklat) */
@@ -24,6 +26,7 @@ const greatVibes = Great_Vibes({
   weight: "400",
   variable: "--font-script",
   display: "swap",
+  preload: false,
 });
 
 /** Font serif alternatif untuk tema undangan bernuansa klasik/tradisional */
@@ -32,6 +35,7 @@ const cormorant = Cormorant_Garamond({
   weight: ["400", "500", "600", "700"],
   variable: "--font-garamond",
   display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
