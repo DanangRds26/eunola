@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/nama-route-asli', // Ganti dengan path/slug dari tab yang kebuka tadi
+        destination: '/tema/adat-jawa-coklat', // Ganti dengan path/slug dari tab yang kebuka tadi
         permanent: true,
       },
     ]
