@@ -98,7 +98,7 @@ export default function FloatingButtons({
 
       {/* Tag Audio Tersembunyi */}
       {config.musicSrc && (
-        <audio ref={audioRef} src={config.musicSrc} loop preload="auto" />
+        <audio ref={audioRef as any} src={config.musicSrc} loop preload="auto" />
       )}
     </>
   );
