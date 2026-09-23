@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/tema/adat-jawa-coklat', // Ganti dengan path/slug dari tab yang kebuka tadi
+        destination: '/tema/adat-jawa-coklat/preview', // Ganti dengan path/slug dari tab yang kebuka tadi
         permanent: true,
       },
     ]
