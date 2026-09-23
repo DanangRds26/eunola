@@ -22,7 +22,6 @@ export default function Cover({
           src={img(couple.heroPhoto, 1200, 1600)}
           alt={`${couple.brideNickname} & ${couple.groomNickname}`}
           seed="cover"
-          fill
           priority
           className="h-full w-full object-cover animate-[invitation-zoom_18s_ease-in-out_infinite_alternate]"
         />
