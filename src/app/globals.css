@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-playfair: 'Playfair Display', serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-garamond: 'Cormorant Garamond', serif;
+}
 @layer base {
   html {
     scroll-behavior: smooth;
