@@ -21,7 +21,7 @@ export default function FloatingButtons({
   onToggleMusic,
 }: {
   config: InvitationThemeConfig;
-  audioRef: RefObject<HTMLAudioElement | null>;
+  audioRef: React.RefObject<HTMLAudioElement | null>;
   playing: boolean;
   onToggleMusic: () => void;
 }) {
