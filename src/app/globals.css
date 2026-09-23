@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-ink antialiased;
+  }
+  ::selection {
+    @apply bg-gold/30;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-gold;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms;
+      transition-duration: 0.01ms;
+    }
+  }
+}
+
+@layer components {
+  /* Lebar konten standar semua section */
+  .container-x {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8;
+  }
+  .section-y {
+    @apply py-16 md:py-24;
+  }
+
+  /* Tombol */
+  .btn {
+    @apply inline-flex items-center justify-center text-sm font-medium tracking-wide transition-colors duration-200;
+  }
+  .btn-gold {
+    @apply btn rounded-full bg-gold px-8 py-3 text-white hover:bg-gold-dark;
+  }
+  .btn-outline-gold {
+    @apply btn rounded-full border border-gold px-8 py-3 text-gold hover:bg-gold hover:text-white;
+  }
+  .btn-outline {
+    @apply btn rounded-xl border border-ink px-8 py-3 text-ink hover:bg-ink hover:text-white;
+  }
+
+  /* Input form */
+  .input {
+    @apply h-12 w-full rounded-lg border border-gray-300 bg-white px-4 text-sm text-ink placeholder:text-muted/80 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold;
+  }
+  .input-error {
+    @apply border-maroon focus:border-maroon focus:ring-maroon;
+  }
+}
