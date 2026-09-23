@@ -7,6 +7,15 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/tema/adat-jawa-coklat/preview',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
