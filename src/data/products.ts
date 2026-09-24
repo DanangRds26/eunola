@@ -26,6 +26,7 @@ export const products: Product[] = [
     description:
       "Tema monokrom adalah konsep visual yang menggunakan satu warna dasar (hue) beserta berbagai gradasi turunannya, seperti tingkat kecerahan (tint) dan kegelapan (shade). Meskipun sering dikaitkan dengan kombinasi hitam dan putih, monokrom sebenarnya bisa menggunakan warna apa saja.",
     images: gallery(0),
+    hasLivePreview: true,
   },
   {
     slug: "elegan",
@@ -40,6 +41,7 @@ export const products: Product[] = [
     description:
       "Tema Elegan memadukan tipografi klasik, ornamen emas tipis, dan ruang kosong yang lega untuk kesan mewah yang tetap hangat. Cocok untuk pasangan yang menginginkan undangan berkelas tanpa terasa berlebihan.",
     images: gallery(1),
+    hasLivePreview: true,
   },
   {
     slug: "love-flower",
@@ -55,6 +57,7 @@ export const products: Product[] = [
     description:
       "Kelopak sakura dan ilustrasi bunga yang lembut menghiasi setiap bagian undangan. Palet pastel yang manis membuat Love Flower terasa romantis dan segar, terutama untuk pernikahan bertema taman.",
     images: gallery(2),
+    hasLivePreview: true,
   },
   {
     slug: "nature",
@@ -69,6 +72,7 @@ export const products: Product[] = [
     description:
       "Nuansa hijau daun, tekstur kayu, dan foto lanskap membawa ketenangan alam ke dalam undangan Anda. Pilihan tepat untuk pernikahan outdoor, garden party, atau acara syukuran di alam terbuka.",
     images: gallery(3),
+    hasLivePreview: true,
   },
   {
     slug: "leviosa",
@@ -83,6 +87,7 @@ export const products: Product[] = [
     description:
       "Leviosa memakai animasi mengambang yang halus pada foto dan teks, dengan komposisi hitam putih yang tegas. Tampilannya modern dan bersih, nyaman dibaca di layar ponsel.",
     images: gallery(4),
+    hasLivePreview: true,
   },
   {
     slug: "lolito",
@@ -98,6 +103,7 @@ export const products: Product[] = [
     description:
       "Warna cerah, balon animasi, dan hitung mundur yang seru menjadikan Lolito favorit untuk ulang tahun anak. Tamu bisa langsung konfirmasi hadir dan mengirim ucapan.",
     images: gallery(5),
+    hasLivePreview: true,
   },
   {
     slug: "respira",
@@ -112,6 +118,7 @@ export const products: Product[] = [
     description:
       "Respira dirancang untuk acara khitanan dan syukuran keluarga dengan nuansa hijau lembut dan kaligrafi sederhana. Ringkas, hangat, dan mudah dibagikan lewat WhatsApp.",
     images: gallery(6),
+    hasLivePreview: true,
   },
   {
     slug: "minimalist",
@@ -127,6 +134,7 @@ export const products: Product[] = [
     description:
       "Tata letak satu kolom, tipografi tegas, dan hanya satu aksen warna. Minimalist memuat cepat di koneksi lambat dan cocok bagi pasangan yang ingin undangan tampil sederhana namun rapi.",
     images: gallery(7),
+    hasLivePreview: true,
   },
   {
     slug: "rustic",
@@ -141,6 +149,7 @@ export const products: Product[] = [
     description:
       "Tekstur kayu, tulisan tangan, dan warna tanah memberi kesan hangat seperti pesta di kebun. Rustic cocok untuk pernikahan intim dengan konsep sederhana dan personal.",
     images: gallery(8),
+    hasLivePreview: true,
   },
   {
     slug: "floral",
@@ -156,6 +165,7 @@ export const products: Product[] = [
     description:
       "Ilustrasi bunga watercolor yang tumbuh perlahan saat undangan digulir. Floral pas untuk ulang tahun, tunangan, atau acara arisan dengan suasana ceria.",
     images: gallery(9),
+    hasLivePreview: true,
   },
   {
     slug: "royal",
@@ -171,6 +181,7 @@ export const products: Product[] = [
     description:
       "Royal adalah tema premium dengan bingkai emas, animasi pembuka amplop, dan galeri layar penuh. Dilengkapi musik latar dan hitung mundur untuk pengalaman undangan yang berkesan.",
     images: gallery(10),
+    hasLivePreview: true,
   },
   {
     slug: "modern",
@@ -185,6 +196,7 @@ export const products: Product[] = [
     description:
       "Modern memakai tipografi geometris dan blok warna berani, ideal untuk undangan wisuda, syukuran kelulusan, atau acara komunitas. Foto profil dan galeri momen ditampilkan besar dan jelas.",
     images: gallery(11),
+    hasLivePreview: true,
   },
   {
     slug: "adat-jawa-coklat",
