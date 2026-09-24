@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Undangan Digital Modern & Elegan",
 };
 
-export default function HomePage() {
+export default function ShopPage() {
   return (
     <>
       <Hero />
