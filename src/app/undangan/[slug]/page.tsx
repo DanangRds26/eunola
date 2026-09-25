@@ -5,35 +5,31 @@ import WeddingInvitation from "@/components/invitation/WeddingInvitation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
-interface Props {
-  params: { slug: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
+type Props = {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
 
-// 1. TAMBAHKAN FUNGSI GENERATEMETADATA
 export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
-  const clientData = getInvitationData(params.slug);
-  const themeConfig = clientData || getThemeConfig(params.slug);
+  // AWAI PROMISE UNTUK NEXT.JS 15
+  const resolvedParams = await params;
+  const resolvedSearchParams = await searchParams;
 
-  // Fallback jika tema/data tidak ditemukan
+  const slug = resolvedParams.slug;
+  const clientData = getInvitationData(slug);
+  const themeConfig = (clientData || getThemeConfig(slug)) as any;
+
   if (!themeConfig) {
     return {
       title: "Undangan Tidak Ditemukan",
-      description: "Halaman undangan atau tema tidak ditemukan.",
     };
   }
 
-  // Ambil nama tamu jika ada query parameter (?to=nama)
-  const namaTamu = searchParams?.to ? `Kpd Yth. ${searchParams.to}` : undefined;
-
-  // Sesuaikan nama field di bawah ini dengan struktur object `themeConfig` atau `clientData` Anda
+  const namaTamu = resolvedSearchParams?.to ? `Kpd Yth. ${resolvedSearchParams.to}` : undefined;
   const title = themeConfig.title || `${themeConfig.groomName || 'Mempelai'} & ${themeConfig.brideName || 'Mempelai'}`;
   const description = namaTamu 
     ? `Tanpa Mengurangi Rasa Hormat, Kami Bermaksud Mengundang ${namaTamu} Pada Acara Pernikahan Kami.`
     : (themeConfig.description || "Tanpa Mengurangi Rasa Hormat, Kami Bermaksud Mengundang Bapak/Ibu/Saudara/i Pada Acara Pernikahan Kami.");
-  
-  // Pastikan URL gambar adalah URL Absolut (HTTPS)
-  const imageUrl = themeConfig.ogImage || "https://eunola-inv.vercel.app/prewedding/prewedding (2).jpeg";
 
   return {
     metadataBase: new URL("https://eunola-inv.vercel.app"),
@@ -42,14 +38,14 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
     openGraph: {
       title: title,
       description: description,
-      url: `https://eunola-inv.vercel.app/undangan/${params.slug}`,
+      url: `/undangan/${slug}`,
       siteName: "Eunola Wedding",
       images: [
         {
-          url: imageUrl, // Wajib diawali https://
+          url: "https://eunola-inv.vercel.app/prewedding/prewedding-2.jpeg", // Pastikan nama file tanpa spasi!
           width: 1200,
           height: 630,
-          alt: `Undangan ${title}`,
+          alt: title,
         },
       ],
       locale: "id_ID",
@@ -58,11 +54,10 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   };
 }
 
-// 2. KOMPONEN UTAMA (TIDAK BERUBAH)
-export default function ThemePreviewPage({ params }: Props) {
-  // Cek apakah ada data pelanggan kustom, jika tidak ada cek dari theme registry (demo)
-  const clientData = getInvitationData(params.slug);
-  const themeConfig = clientData || getThemeConfig(params.slug);
+export default async function ThemePreviewPage({ params }: Props) {
+  const resolvedParams = await params;
+  const clientData = getInvitationData(resolvedParams.slug);
+  const themeConfig = clientData || getThemeConfig(resolvedParams.slug);
 
   if (!themeConfig) {
     return (
