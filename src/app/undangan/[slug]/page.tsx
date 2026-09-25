@@ -43,8 +43,8 @@ export async function generateMetadata({
 
   const title =
     themeConfig.title ||
-    `${themeConfig.groomName || "Mempelai"} & ${
-      themeConfig.brideName || "Mempelai"
+    `${themeConfig.groomName || "Danny"} & ${
+      themeConfig.brideName || "Santi"
     }`;
 
   const description = namaTamu
