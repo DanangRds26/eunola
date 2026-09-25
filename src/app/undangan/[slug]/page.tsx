@@ -54,7 +54,7 @@ export async function generateMetadata({
 
   const baseUrl = "https://eunola-inv.vercel.app";
 
-  const ogImage = `${baseUrl}/prewedding/prewedding-2.jpeg`;
+  const ogImage = `${baseUrl}/prewedding/og-image.jpeg`;
 
   return {
     metadataBase: new URL(baseUrl),
