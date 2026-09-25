@@ -80,7 +80,7 @@ export const daniSantiData: InvitationThemeConfig = {
 
     
   },
-
+  ogImage: "https://eunola-inv.vercel.app/prewedding/og-image.jpeg",
   preweddingImages: [
       {
         src: "/prewedding/prewedding-1.jpeg",

@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-
 import { getThemeConfig } from "@/themes/registry";
 import { getInvitationData } from "@/data/invitation/[slug]";
-
 import WeddingInvitation from "@/components/invitation/WeddingInvitation";
-
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
@@ -12,7 +9,6 @@ type Props = {
   params: Promise<{
     slug: string;
   }>;
-
   searchParams: Promise<{
     [key: string]: string | string[] | undefined;
   }>;
@@ -26,10 +22,8 @@ export async function generateMetadata({
   const resolvedSearchParams = await searchParams;
 
   const slug = resolvedParams.slug;
-
   const clientData = getInvitationData(slug);
-
-  const themeConfig = clientData || getThemeConfig(slug);
+  const themeConfig = (clientData || getThemeConfig(slug)) as any;
 
   if (!themeConfig) {
     return {
@@ -38,14 +32,13 @@ export async function generateMetadata({
   }
 
   const to = resolvedSearchParams.to;
-
   const namaTamu = Array.isArray(to) ? to[0] : to;
 
-  const title =
-    themeConfig.title ||
-    `${themeConfig.groomName || "Danny"} & ${
-      themeConfig.brideName || "Santi"
-    }`;
+  // Cek struktur nama pengantin (bisa langsung di root atau di dalam objek `couple`)
+  const groom = themeConfig.groomName || themeConfig.couple?.groomName || "Danny";
+  const bride = themeConfig.brideName || themeConfig.couple?.brideName || "Santi";
+
+  const title = themeConfig.title || `${groom} & ${bride}`;
 
   const description = namaTamu
     ? `Tanpa Mengurangi Rasa Hormat, Kami Bermaksud Mengundang Kpd Yth. ${namaTamu} Pada Acara Pernikahan Kami.`
@@ -54,19 +47,21 @@ export async function generateMetadata({
 
   const baseUrl = "https://eunola-inv.vercel.app";
 
-  const ogImage = `${baseUrl}/prewedding/og-image.jpeg`;
+  // Gunakan ogImage dari config jika ada, jika tidak ada gunakan fallback og-image.jpeg
+  const ogImage = themeConfig.ogImage 
+    ? (themeConfig.ogImage.startsWith('http') ? themeConfig.ogImage : `${baseUrl}${themeConfig.ogImage}`)
+    : `${baseUrl}/prewedding/og-image.jpeg`;
 
   return {
     metadataBase: new URL(baseUrl),
 
     title,
-
     description,
 
     openGraph: {
       title,
       description,
-      url: `${baseUrl}/undangan/${slug}`,
+      url: `/undangan/${slug}`,
       siteName: "Eunola Wedding",
 
       images: [
@@ -95,9 +90,7 @@ export default async function ThemePreviewPage({ params }: Props) {
   const resolvedParams = await params;
 
   const clientData = getInvitationData(resolvedParams.slug);
-
-  const themeConfig =
-    clientData || getThemeConfig(resolvedParams.slug);
+  const themeConfig = clientData || getThemeConfig(resolvedParams.slug);
 
   if (!themeConfig) {
     return (
