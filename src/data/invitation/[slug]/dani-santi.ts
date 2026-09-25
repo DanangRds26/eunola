@@ -23,7 +23,7 @@ export const daniSantiData: InvitationThemeConfig = {
     loveStory: [
       {
         title: "Awal Pertemuan",
-        date: "2023",
+        date: "2020",
         text: "Tak ada yang kebetulan di dunia ini — pertemuan pertama kami terjadi di acara kampus yang sederhana, namun meninggalkan kesan yang tak terlupakan.",
       },
 
@@ -72,113 +72,113 @@ export const daniSantiData: InvitationThemeConfig = {
     ],
     whatsappNumber: "628xxxxxxxxxx",
 
-    heroPhoto: "/prewedding/prewedding (7).jpeg",
+    heroPhoto: "/prewedding/prewedding-7.jpeg",
 
-    bridePhoto: "/prewedding/prewedding (1).jpeg",
+    bridePhoto: "/prewedding/prewedding-1.jpeg",
 
-    groomPhoto: "/prewedding/prewedding (3).jpeg",
+    groomPhoto: "/prewedding/prewedding-3.jpeg",
 
     
   },
 
   preweddingImages: [
       {
-        src: "/prewedding/prewedding (1).jpeg",
+        src: "/prewedding/prewedding-1.jpeg",
         alt: "Prewedding 1",
         enabled: true,
       },
       {
-        src: "/prewedding/prewedding (2).jpeg",
+        src: "/prewedding/prewedding-2.jpeg",
         alt: "Prewedding 2",
         enabled: true,
       },
       {
-        src: "/prewedding/prewedding (3).jpeg",
+        src: "/prewedding/prewedding-3.jpeg",
         alt: "Prewedding 3",
         enabled: true,
       },
       {
-        src: "/prewedding/prewedding (4).jpeg",
+        src: "/prewedding/prewedding-4.jpeg",
         alt: "Prewedding 4",
         enabled: true,
       },
       {
-        src: "/prewedding/prewedding (5).jpeg",
+        src: "/prewedding/prewedding-5.jpeg",
         alt: "Prewedding 5",
         enabled: true,
       },
       {
-        src: "/prewedding/prewedding (6).jpeg",
+        src: "/prewedding/prewedding-6.jpeg",
         alt: "Prewedding 6",
         enabled: true,
       },
       {
-        src: "/prewedding/prewedding (7).jpeg",
+        src: "/prewedding/prewedding-7.jpeg",
         alt: "Prewedding 7",
         enabled: true,
       },
       {
-        src: "/prewedding/prewedding (8).jpeg",
+        src: "/prewedding/prewedding-8.jpeg",
         alt: "Prewedding 8",
         enabled: true,
       },
       {
-        src: "/prewedding/prewedding (9).jpeg",
+        src: "/prewedding/prewedding-9.jpeg",
         alt: "Prewedding 9",
         enabled: true,
       },
       {
-        src: "/prewedding/prewedding (10).jpeg",
+        src: "/prewedding/prewedding-10.jpeg",
         alt: "Prewedding 10",
         enabled: true,
       },
       {
-        src: "/prewedding/prewedding (11).jpeg",
+        src: "/prewedding/prewedding-11.jpeg",
         alt: "",
         enabled: false,
       },
       {
-        src: "/prewedding/prewedding (12).jpeg",
+        src: "/prewedding/prewedding-12.jpeg",
         alt: "Prewedding 12",
         enabled: false,
       },
       {
-        src: "/prewedding/prewedding (13).jpeg",
+        src: "/prewedding/prewedding-13.jpeg",
         alt: "Prewedding 13",
         enabled: false,
       },
       {
-        src: "/prewedding/prewedding (14).jpeg",
+        src: "/prewedding/prewedding-14.jpeg",
         alt: "Prewedding 14",
         enabled: false, 
       },
       {
-        src: "/prewedding/prewedding (15).jpeg",
+        src: "/prewedding/prewedding-15.jpeg",
         alt: "Prewedding 15",
         enabled: false, 
       },
       {
-        src: "/prewedding/prewedding (16).jpeg",
+        src: "/prewedding/prewedding-16.jpeg",
         alt: "Prewedding 16",
         enabled: false, 
       },
       {
-        src: "/prewedding/prewedding (17).jpeg",
+        src: "/prewedding/prewedding-17.jpeg",
         alt: "Prewedding 17",
         enabled: false, 
       },
       {
-        src: "/prewedding/prewedding (18).jpeg",
+        src: "/prewedding/prewedding-18.jpeg",
         alt: "Prewedding 18",
         enabled: false, 
       },
       {
-        src: "/prewedding/prewedding (19).jpeg",
+        src: "/prewedding/prewedding-19.jpeg",
         alt: "Prewedding 19",
         enabled: false, 
       },
       {
-        src: "/prewedding/prewedding (20).jpeg",
+        src: "/prewedding/prewedding-20.jpeg",
         alt: "Prewedding 20",
         enabled: false, 
       },

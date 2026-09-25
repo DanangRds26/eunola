@@ -36,6 +36,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const imageUrl = themeConfig.ogImage || "https://eunola-inv.vercel.app/prewedding/prewedding (2).jpeg";
 
   return {
+    metadataBase: new URL("https://eunola-inv.vercel.app"),
     title: title,
     description: description,
     openGraph: {
