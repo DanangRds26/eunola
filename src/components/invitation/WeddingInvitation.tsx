@@ -15,6 +15,9 @@ import Rsvp from "@/components/invitation/sections/Rsvp";
 import ClosingPrayer from "@/components/invitation/sections/ClosingPrayer";
 import Closing from "@/components/invitation/sections/Closing";
 import FloatingButtons from "@/components/invitation/FloatingButtons";
+import PreweddingShowcase from "@/components/invitation/PreweddingShowcase";
+import PreweddingGallery from "@/components/invitation/PreweddingGallery";
+
 
 export default function WeddingInvitation({ config }: { config: InvitationThemeConfig }) {
   const [loading, setLoading] = useState(true);
@@ -66,6 +69,7 @@ export default function WeddingInvitation({ config }: { config: InvitationThemeC
       {/* Isi Undangan */}
       {opened && (
         <div className="animate-[invitation-content-in_1s_ease-out_0.3s_both]">
+          <div id="prewedding-showcase"><PreweddingShowcase /></div>
           <Quote config={config} />
           <div id="couple"><Couple config={config} /></div>
           <div id="countdown"><Countdown config={config} /></div>
@@ -74,6 +78,7 @@ export default function WeddingInvitation({ config }: { config: InvitationThemeC
           <div id="love-story"><LoveStory config={config} /></div>
           <div id="gift"><Gift config={config} /></div>
           <div id="rsvp"><Rsvp config={config} /></div>
+          <div id="prewedding-gallery"><PreweddingGallery /></div>
           <ClosingPrayer config={config} />
           <Closing config={config} />
         </div>

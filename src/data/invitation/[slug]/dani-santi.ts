@@ -1,39 +1,41 @@
 import type { InvitationThemeConfig } from "@/themes/types";
-import { monochromeConfig } from "@/themes/monochrome/config";
+import { adatJawaCoklatConfig } from "@/themes/adat-jawa-coklat/config";
 
-export const danangGustutyData: InvitationThemeConfig = {
-  ...monochromeConfig,
-  id: "danang-gustuty",
-  name: "Danang & Gustuty Wedding",
+export const daniSantiData: InvitationThemeConfig = {
+  ...adatJawaCoklatConfig,
+  id: "dani-santi",
+  name: "Dani & Santi Wedding",
 
   couple: {
-    ...monochromeConfig.couple,
+    ...adatJawaCoklatConfig.couple,
 
     // Ganti Data Pengantin
-    brideName: "Gustuty Indriyani",
-    brideNickname: "Gustuty",
-    brideParents: "Putri dari Bapak ... & Ibu ...",
+    brideName: "Tri Susanti",
+    brideNickname: "Santi",
+    brideParents: "Putri dari Bapak Yonald Eduard Ngongoloy & Ibu Wasiah",
 
-    groomName: "Danang Rahmaddiansyah",
-    groomNickname: "Danang",
-    groomParents: "Putra dari Bapak ... & Ibu ...",
-    hashtag: "#DannySantiForever",
+    groomName: "Danny Ramadhan",
+    groomNickname: "Danny",
+    groomParents: "Putra dari Bapak Hariyanto & Ibu Mulatsih",
+    hashtag: "#DaniSantiForever",
+    giftAddress:
+      "Jalan Desa Panaragan RT 04/08 Sukamaju (Tulung Sawo) Tulang bawang barat kec Tulang bawang tengah",
     loveStory: [
       {
         title: "Awal Pertemuan",
-        date: "2020",
+        date: "2023",
         text: "Tak ada yang kebetulan di dunia ini — pertemuan pertama kami terjadi di acara kampus yang sederhana, namun meninggalkan kesan yang tak terlupakan.",
       },
 
       {
         title: "Menjalin Hubungan",
-        date: "2022",
+        date: "2024",
         text: "Seiring berjalannya waktu, berawal dari sering nongkrong bareng. Kami memahami satu sama lain, saling mendukung, dan tumbuh menjadi pasangan yang kuat.",
       },
 
       {
         title: "Lamaran",
-        date: "2025",
+        date: "2026",
         text: "Dengan niat dan restu orang tua kedua belah pihak, kami memantapkan langkah menuju jenjang yang lebih serius.",
       },
 
@@ -45,31 +47,36 @@ export const danangGustutyData: InvitationThemeConfig = {
     ],
 
     // Tanggal Acara
-    eventDateTime: "2027-05-20T08:00:00+07:00",
-    eventDateLabel: "Rabu, 20 Mei 2027",
+    eventDateTime: "2026-09-29T08:00:00+09:00",
+    eventDateLabel: "Selasa, 29 September 2026",
 
-    akadTime: "08.00 – 10.00 WIB",
-    resepsiTime: "11.00 – 15.00 WIB",
+    akadTime: "09.00 – 10.00 WIB",
+    resepsiTime: "10.00 – Selesai WIB",
 
-    venueName: "Gedung / Rumah",
-    venueAddress: "Alamat Lengkap Acara",
-    mapsUrl: "https://maps.google.com/?q=...",
+    venueName: "Rumah Mempelai Wanita",
+    venueAddress: "Jalan Desa Panaragan RT 04/08 Sukamaju (Tulung Sawo) Tulang bawang barat kec Tulang bawang tengah",
+    mapsUrl: "https://maps.app.goo.gl/voJ8YahtbjqFdvnR9?g_st=ac",
 
     // Rekening & Kontak
     bankAccounts: [
       {
-        bank: "BCA",
-        number: "1234567890",
-        holder: "Danang Rahmaddiansyah",
+        bank: "SEABANK",
+        number: "901293713381",
+        holder: "Tri Susanti",
+      },
+      {
+        bank: "DANA",
+        number: " 081387417376",
+        holder: "Tri Susanti",
       },
     ],
     whatsappNumber: "628xxxxxxxxxx",
 
-    heroPhoto: "/foto/hero.jpg",
+    heroPhoto: "/prewedding/prewedding (7).jpeg",
 
-    bridePhoto: "/foto/bride-indri.jpg",
+    bridePhoto: "/prewedding/prewedding (1).jpeg",
 
-    groomPhoto: "/foto/groom-danang.jpg",
+    groomPhoto: "/prewedding/prewedding (3).jpeg",
 
     
   },

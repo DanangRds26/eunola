@@ -40,6 +40,19 @@ export interface BankAccount {
   holder: string;
 }
 
+export type PreweddingLayout =
+  | "featured"
+  | "normal"
+  | "wide"
+  | "tall";
+
+export interface PreweddingImage {
+  src: string;
+  alt: string;
+  enabled: boolean;
+  layout?: PreweddingLayout;
+  objectPosition?: string;
+}
 export interface CoupleData {
   brideName: string;
   brideNickname: string;
@@ -80,5 +93,8 @@ export interface InvitationThemeConfig {
   fonts: ThemeFonts;
   /** Path musik latar di /public, kosongkan jika belum ada file musik */
   musicSrc?: string;
+  preweddingImages: PreweddingImage[];
   couple: CoupleData;
 }
+
+
