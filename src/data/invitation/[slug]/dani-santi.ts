@@ -55,7 +55,7 @@ export const daniSantiData: InvitationThemeConfig = {
 
     venueName: "Rumah Mempelai Wanita",
     venueAddress: "Jalan Desa Panaragan RT 04/08 Sukamaju (Tulung Sawo) Tulang bawang barat kec Tulang bawang tengah",
-    mapsUrl: "https://maps.app.goo.gl/voJ8YahtbjqFdvnR9?g_st=ac",
+    mapsUrl: "https://goo.gl/maps/NaEbdP5s4c7sqp276?g_st=aw",
 
     // Rekening & Kontak
     bankAccounts: [
@@ -69,8 +69,13 @@ export const daniSantiData: InvitationThemeConfig = {
         number: " 081387417376",
         holder: "Tri Susanti",
       },
+      {
+        bank: "DANA",
+        number: " 085788642819",
+        holder: "Danny Ramadhan",
+      },
     ],
-    whatsappNumber: "628xxxxxxxxxx",
+    whatsappNumber: "6285788642819",
 
     heroPhoto: "/prewedding/prewedding-7.jpeg",
 
@@ -80,7 +85,7 @@ export const daniSantiData: InvitationThemeConfig = {
 
     
   },
-  ogImage: "https://eunola-inv.vercel.app/prewedding/og-image.jpeg",
+  
   preweddingImages: [
       {
         src: "/prewedding/prewedding-1.jpeg",
