@@ -12,6 +12,9 @@ import { rusticConfig } from "./rustic/config";
 import { floralConfig } from "./floral/config";
 import { royalConfig } from "./royal/config";
 import { modernConfig } from "./modern/config";
+
+
+
 /**
  * GANTI DI SINI: daftarkan tema baru di sini agar otomatis punya halaman
  * demo di /tema/[slug]/preview. Key harus sama dengan `slug` produk di

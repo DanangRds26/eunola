@@ -1,45 +1,46 @@
 import type { InvitationThemeConfig } from "../types";
 
 /**
- * Tema Leviosa
+ * Tema Royal
  *
  * Konsep:
- * - Magical & dreamy wedding
- * - Elegant botanical fantasy
- * - Deep emerald sebagai warna utama
- * - Midnight green sebagai warna gelap
- * - Champagne gold sebagai aksen mewah
- * - Soft lavender sebagai detail magical
- * - Ivory sebagai background utama
- * - Typography romantic, elegant, dan timeless
- * - Cocok untuk wedding yang intimate, enchanting, dan luxurious
+ * - Regal & luxurious wedding
+ * - Classic royal elegance
+ * - Royal navy sebagai warna utama
+ * - Deep burgundy sebagai warna gelap
+ * - Antique gold sebagai aksen mewah
+ * - Soft champagne sebagai detail dekoratif
+ * - Warm ivory sebagai background utama
+ * - Typography classic, sophisticated, dan timeless
+ * - Cocok untuk wedding yang grand, formal,
+ *   elegant, luxurious, dan prestigious
  */
 
-export const leviosaConfig: InvitationThemeConfig = {
-  id: "leviosa",
-  name: "Leviosa",
+export const royalConfig: InvitationThemeConfig = {
+  id: "royal",
+  name: "Royal",
 
   colors: {
-    // Emerald — warna utama, heading, button
-    primary: "#315C50",
+    // Royal navy — warna utama, heading, button
+    primary: "#243B64",
 
-    // Deep emerald — hero gelap dan footer
-    primaryDark: "#172F29",
+    // Deep navy — hero gelap dan footer
+    primaryDark: "#111D36",
 
-    // Champagne gold — accent dan decorative element
-    accent: "#C7A96B",
+    // Antique gold — accent dan decorative element
+    accent: "#C6A15B",
 
-    // Soft lavender — ornament dan decorative background
-    accentSoft: "#D9D1DE",
+    // Soft champagne — ornament dan decorative background
+    accentSoft: "#E5D6B8",
 
     // Warm ivory — background utama
-    surface: "#F8F5EE",
+    surface: "#F8F4EA",
 
-    // Deep charcoal green — text utama
-    text: "#29332F",
+    // Deep navy charcoal — text utama
+    text: "#252C38",
 
-    // Muted sage — secondary text
-    textMuted: "#7B857F",
+    // Muted slate — secondary text
+    textMuted: "#747B86",
   },
 
   fonts: {
@@ -58,25 +59,19 @@ export const leviosaConfig: InvitationThemeConfig = {
 
   couple: {
     brideName: "Ruby Melani",
-
     brideNickname: "Ruby",
-
     brideParents:
       "Putri Pertama dari Bapak Ridwan & Ibu Ririn Sumantri",
 
     groomName: "Jaden Ramadhan",
-
     groomNickname: "Jaden",
-
     groomParents:
       "Putra Kedua dari Bapak Mustafa & Ibu Jumariati",
 
     eventDateTime: "2026-11-15T13:00:00+07:00",
-
     eventDateLabel: "Minggu, 15 November 2026",
 
     akadTime: "13.00 – 14.45 WIB",
-
     resepsiTime: "15.30 – 19.30 WIB",
 
     venueName: "Kluwiland",
@@ -113,21 +108,18 @@ export const leviosaConfig: InvitationThemeConfig = {
         text:
           "Tak ada yang kebetulan di dunia ini — pertemuan pertama kami terjadi di acara kampus yang sederhana, namun meninggalkan kesan yang tak terlupakan.",
       },
-
       {
         title: "Menjalin Hubungan",
         date: "2022",
         text:
           "Seiring berjalannya waktu, kedekatan itu tumbuh menjadi komitmen. Kami belajar saling memahami dan menguatkan satu sama lain.",
       },
-
       {
         title: "Lamaran",
         date: "2025",
         text:
           "Dengan niat dan restu orang tua kedua belah pihak, kami memantapkan langkah menuju jenjang yang lebih serius.",
       },
-
       {
         title: "Hari Pernikahan",
         date: "2026",
@@ -152,11 +144,9 @@ export const leviosaConfig: InvitationThemeConfig = {
     closingCredit: "Undangan Digital by Eunola",
 
     // Foto sementara
-    // Nantinya dapat diganti dengan foto khusus tema Leviosa
+    // Nantinya dapat diganti dengan foto khusus tema Royal
     heroPhoto: "1519741497674-611481863552",
-
     bridePhoto: "1465495976277-4387d4b0b4c6",
-
     groomPhoto: "1522673607200-164d1b6ce486",
   },
 };

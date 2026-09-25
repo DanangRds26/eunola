@@ -53,61 +53,73 @@ export default function ProductCard({ product, layout = "grid" }: Props) {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <Link href={`/tema/${product.slug}`} className="block" aria-label={`Lihat tema ${product.name}`}>
-        <div className="relative aspect-square overflow-hidden">
-          <SafeImage
-            src={img(photoId, 700, 700)}
-            alt={product.name}
-            seed={product.slug}
-            className="h-full w-full object-cover"
-          />
+      <div className="relative aspect-square overflow-hidden">
+        <SafeImage
+          src={img(photoId, 700, 700)}
+          alt={product.name}
+          seed={product.slug}
+          className="h-full w-full object-cover"
+        />
 
-          {/* Overlay hover: tombol Lihat Tema + ikon aksi, sesuai mockup */}
-          <div
-            className={`absolute inset-0 flex flex-col items-center justify-center gap-4 bg-ink/55 transition-opacity duration-300 ${
-              hover ? "opacity-100" : "opacity-0"
-            }`}
+        {/* Overlay hover: tombol Lihat Tema + ikon aksi, sesuai mockup */}
+        <div
+          className={`absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 bg-ink/55 transition-opacity duration-300 ${
+            hover ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Link
+            href={`/tema/${product.slug}`}
+            className="rounded-sm bg-white px-6 py-3 text-xs font-semibold tracking-wide text-ink"
           >
-            <span className="rounded-sm bg-white px-6 py-3 text-xs font-semibold tracking-wide text-ink">
-              LIHAT TEMA
-            </span>
-            <div className="flex items-center gap-4 text-xs font-medium text-white">
-              <button
-                type="button"
-                onClick={(e) => e.preventDefault()}
-                className="flex items-center gap-1 hover:text-gold"
-              >
-                <Share2 className="h-3.5 w-3.5" /> Share
-              </button>
-              <button
-                type="button"
-                onClick={(e) => e.preventDefault()}
-                className="flex items-center gap-1 hover:text-gold"
-              >
-                <Repeat className="h-3.5 w-3.5" /> Compare
-              </button>
-              <button
-                type="button"
-                onClick={(e) => e.preventDefault()}
-                className="flex items-center gap-1 hover:text-gold"
-              >
-                <Heart className="h-3.5 w-3.5" /> Like
-              </button>
-            </div>
+            LIHAT TEMA
+          </Link>
+          <div className="flex items-center gap-4 text-xs font-medium text-white">
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+              className="flex items-center gap-1 hover:text-gold"
+            >
+              <Share2 className="h-3.5 w-3.5" /> Share
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+              className="flex items-center gap-1 hover:text-gold"
+            >
+              <Repeat className="h-3.5 w-3.5" /> Compare
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+              className="flex items-center gap-1 hover:text-gold"
+            >
+              <Heart className="h-3.5 w-3.5" /> Like
+            </button>
           </div>
         </div>
+      </div>
 
-        <div className="bg-surface px-4 py-4 text-center">
+      <div className="bg-surface px-4 py-4 text-center">
+        <Link href={`/tema/${product.slug}`}>
           <h3 className="text-base font-medium text-ink">{product.name}</h3>
-          <p className="mt-0.5 text-sm text-muted">{product.subtitle}</p>
-          <p className="mt-2 text-sm">
-            <span className="font-semibold text-ink">{formatRupiah(product.price)}</span>
-            {product.oldPrice && (
-              <span className="ml-2 text-muted line-through">{formatRupiah(product.oldPrice)}</span>
-            )}
-          </p>
-        </div>
-      </Link>
+        </Link>
+        <p className="mt-0.5 text-sm text-muted">{product.subtitle}</p>
+        <p className="mt-2 text-sm">
+          <span className="font-semibold text-ink">{formatRupiah(product.price)}</span>
+          {product.oldPrice && (
+            <span className="ml-2 text-muted line-through">{formatRupiah(product.oldPrice)}</span>
+          )}
+        </p>
+      </div>
     </div>
   );
 }
