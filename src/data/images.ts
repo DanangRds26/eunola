@@ -1,11 +1,18 @@
 /**
  * Semua foto placeholder ada di sini (Unsplash).
- * GANTI DI SINI: ganti ID dengan foto template asli, atau ubah `img()` agar
- * menunjuk ke /public/images/... milik Anda.
- * Jika sebuah foto gagal dimuat, <SafeImage> otomatis memakai gambar cadangan.
+ * Jika menginput path lokal (/foto/...) atau URL utuh (http...), fungsi akan mengembalikan path tersebut secara langsung.
  */
-export const img = (id: string, w = 800, h?: number) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}${h ? `&h=${h}` : ""}&q=80`;
+export const img = (id: string, w = 800, h?: number) => {
+  if (!id) return "/brand/placeholder.png";
+
+  // Jika berupa path lokal (diawali '/') atau URL internet utuh (diawali 'http')
+  if (id.startsWith("/") || id.startsWith("http")) {
+    return id;
+  }
+
+  // Fallback untuk ID Unsplash bawaan
+  return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}${h ? `&h=${h}` : ""}&q=80`;
+};
 
 export const PHOTO = {
   heroCouple: "1519741497674-611481863552",
