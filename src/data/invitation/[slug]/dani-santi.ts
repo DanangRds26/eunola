@@ -24,7 +24,7 @@ export const daniSantiData: InvitationThemeConfig = {
       {
         title: "Awal Pertemuan",
         date: "2020",
-        text: "Tak ada yang kebetulan di dunia ini — pertemuan pertama kami terjadi di acara kampus yang sederhana, namun meninggalkan kesan yang tak terlupakan.",
+        text: "Tak ada yang kebetulan di dunia ini — pertemuan pertama kami terjadi di sekolah, namun meninggalkan kesan yang tak terlupakan.",
       },
 
       {
